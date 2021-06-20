@@ -1,6 +1,9 @@
-
+<?php
+    $sql_category = 'SELECT * FROM loaisanpham ORDER BY MaLoai DESC';
+    $fetch_category = mysqli_query($conn,$sql_category);
+?>
 <div class="navigation">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
             <!--img class="navbar-brand" src="./images/Logo.png"-->
             <h2 class="col-md-3 footer-left"><a href="index.php"><span>C</span>amper Store </a></h2>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -12,9 +15,26 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo 'index.php';?>">Trang Chủ <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.php">Sản Phẩm</a>
+                    <!-- Dropdown -->
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                            Sản Phẩm
+                        </a>
+                        <div class="dropdown-menu">
+                        <?php
+                            while($row_category = mysqli_fetch_array($fetch_category))
+                            {
+                        ?>
+                            <a class="dropdown-item" href="#" value="<?php echo $row_category['MaLoai']?>">
+                                <?php echo $row_category['TenLoaiSP']?>
+                            </a>
+                        <?php
+                            }
+                        ?>    
+                        </div>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">Giới Thiệu</a>
                     </li>
@@ -27,6 +47,6 @@
                    
                 </form>
             </div>
-            <h3><a href="login.php">Login</a></h3><g id="account-circle"></g>
+            <a href="login.php"><i class='fas fa-user' style='font-size:36px'></i></a>
         </nav>
     </div>
