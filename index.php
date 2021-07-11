@@ -1,0 +1,1 @@
+<?php include_once "../ShopThoiTrang_PHP/page/index.php";?>
