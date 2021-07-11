@@ -1,7 +1,15 @@
+<?php
+    include 'lib/session.php';
+    Session::init();
+?>
+<?php
+    header("Cache-Control: no-cache, must-revalidate");
+    header("Pragma: no-cache");
+?>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible">
-    <title>Page Title</title>
+    <!-- <title>Page Title</title> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
@@ -23,4 +31,18 @@
     <script type="text/javascript" src="js/Slider.js"></script>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script type="text/javascript" src="../script/jsNguoiDung/simpleCart.min.js"> </script>
+    <link href="../css/cssNguoiDung/memenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="../script/jsNguoiDung/memenu.js"></script>
+    <script>$(document).ready(function(){$(".memenu").memenu();});</script>
+    <script type="text/javascript" src="../script/jsNguoiDung/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../script/jsNguoiDung/move-top.js"></script>
+    <script type="text/javascript" src="../script/jsNguoiDung/easing.js"></script>
+    <script type="text/javascript" src="../script/jsNguoiDung/jquery-1.11.0.min.js"></script>
+    <link href="../css/cssNguoiDung/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/cssNguoiDung/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="../script/jsNguoiDung/simpleCart.min.js"></script>
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    
 </head>

@@ -35,11 +35,19 @@
   	background: white;
   	text-align: center;
     position: relative;
-  
+
+}
+.hinhanh{
+	box-shadow: 0 4px 8 px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width:210px;
+	height:220px;
+	/*cac thuoc tinh dung de tao hieu ung transform*/
+	transition:all 0.5s ease;
 }
 </style>
+
 <div class="header">
-        <img src="images/logochinhthuc.png" usemap="#Map" style="border: 0ch"/>
+        <img src="../images/logochinhthuc.png" usemap="#Map" style="border: 0ch"/>
           
         <span class="heading-primary_main">you are my everything<i class="fas fa-cloud"></i></span>
 </div>
